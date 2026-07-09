@@ -1,0 +1,83 @@
+import os
+from dotenv import load_dotenv
+from ollama import Client
+
+load_dotenv()
+
+client = Client(host = os.getenv("OLLAMA_HOST"))
+
+SYSTEM_PROMPT = """You are an assistant for a Indian and Chinese Restaurant
+                Answer questions about:
+                - menu
+                - reservations
+                - hours
+                Don't answer unrelated questions. Don't be repetitive.
+                Be polite and consise.
+                Always answer in Markdown."""
+
+ASSISTANT_MESSAGE = """
+Welcome to Saffron Indian & Chinese Restaurant!
+
+Here is the restaurant information:
+
+## Hours
+- Monday - Thursday: 11:00 AM - 10:00 PM
+- Friday - Saturday: 11:00 AM - 11:00 PM
+- Sunday: 12:00 PM - 9:00 PM
+
+## Reservations
+- Reservations are accepted for up to 12 guests.
+- Walk-ins are welcome, subject to availability.
+- Reservations can be made by phone or online.
+
+## Popular Indian Dishes
+- Butter Chicken - $16.99
+- Chicken Tikka Masala - $17.99
+- Lamb Rogan Josh - $19.99
+- Paneer Butter Masala - $15.99
+- Garlic Naan - $3.99
+- Vegetable Biryani - $14.99
+
+## Popular Chinese Dishes
+- Kung Pao Chicken - $15.99
+- Sweet & Sour Pork - $16.99
+- Beef with Broccoli - $17.99
+- Vegetable Fried Rice - $11.99
+- Chicken Chow Mein - $14.99
+- Spring Rolls (4 pcs) - $6.99
+
+## Drinks
+- Mango Lassi - $4.99
+- Masala Chai - $3.50
+- Jasmine Tea - $2.99
+- Soft Drinks - $2.50
+
+Always use this information when answering customer questions. If information is unavailable, politely say you don't know rather than making it up.
+"""
+
+messages = [{"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "assistant", "content": ASSISTANT_MESSAGE}]
+
+while True:
+    user_input = input("User: ")
+
+    if user_input.lower() in ["quit", "exit"]:
+        break
+
+    messages.append({"role": "user", "content": user_input})
+
+    stream = client.chat(
+        model = "qwen3.6:latest",
+        messages = messages,
+        stream = True
+    )
+
+    assistant_message = ""
+
+    for chunk in stream:
+        assistant_message += chunk["message"]["content"]
+        print(chunk["message"]["content"], end="", flush=True)
+    
+    messages.append({"role": "assistant", "content": assistant_message})
+    
+    print()
