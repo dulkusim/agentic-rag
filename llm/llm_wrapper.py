@@ -8,4 +8,5 @@ def generate(messages):
     return client.chat(
         model = config.MODEL,
         messages = messages,
+        stream = config.STREAM
         )
