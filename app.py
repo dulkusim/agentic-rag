@@ -20,10 +20,15 @@ while True:
 
     messages.append({"role": "user", "content": user_input})
 
-    response = llm_wrapper.generate(messages=messages)
+    stream = llm_wrapper.generate(messages=messages)
 
-    assistant_message = response["message"]["content"]
-    print(assistant_message)
+    assistant_message = ""
+    for chunk in stream:
+        assistant_message += chunk["message"]["content"]
+        print(chunk["message"]["content"], end="", flush=True)
+        
+    print()
+    
     messages.append({"role": "assistant", "content": assistant_message})
     
     log_turn(user_input, assistant_message)
