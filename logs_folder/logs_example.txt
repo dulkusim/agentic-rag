@@ -1,5 +1,5 @@
 ============================================================
-Conversation started: 13-07-2026 11:31:58
+Conversation started: 13-07-2026 11:53:30
 ============================================================
 
 SYSTEM PROMPT
@@ -51,15 +51,13 @@ Here is the restaurant information:
 
 Always use this information when answering customer questions. If information is unavailable, politely say you don't know rather than making it up.
 
-[13-07-2026 11:32:10]
+[13-07-2026 11:53:39]
 User: Hi
-Assistant: Hello! 👋 Welcome to **Saffron Indian & Chinese Restaurant**. 
-
-How can I help you today? Feel free to ask about our **menu**, make a **reservation**, or check our **opening hours**.
+Assistant: Hello! 👋 Welcome to our Indian & Chinese Restaurant. How can I assist you today? Feel free to ask about our **menu**, **reservations**, or **hours**.
 ------------------------------------------------------------
-[13-07-2026 11:32:34]
-User: What time do you open in Monday?
-Assistant: We open at **11:00 AM** on Mondays. (Our Monday through Thursday hours are 11:00 AM – 10:00 PM.)
+[13-07-2026 11:53:54]
+User: What time do you open on Mondays?
+Assistant: We open at **11:00 AM** on Mondays (and Thursday), closing at 10:00 PM. 
 
-Let me know if you'd like to make a reservation or check out our menu! 🍛🥢
+Would you like to browse our menu or make a reservation? 🍛🥢
 ------------------------------------------------------------
