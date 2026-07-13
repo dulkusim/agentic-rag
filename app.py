@@ -3,7 +3,11 @@ from llm import llm_wrapper
 with open("./prompts/restaurant_system.txt", "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
 
-messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+with open("./prompts/restaurant_content.txt", "r", encoding="utf-8") as f:
+    ASSISTANT_MESSAGE = f.read()
+
+messages = [{"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "assistant", "content": ASSISTANT_MESSAGE}]
 
 while True:
     user_input = input("User: ")
