@@ -1,6 +1,4 @@
 from llm import llm_wrapper
-import config
-from ollama import Client
 
 with open("./prompts/restaurant_system.txt", "r", encoding="utf-8") as f:
     SYSTEM_PROMPT = f.read()
