@@ -1,3 +1,9 @@
+---
+domain: menu
+type: beverage
+category: wine
+---
+
 # White Wines | Λευκά Κρασιά
 
 ## His Queen
