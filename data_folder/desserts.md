@@ -1,9 +1,3 @@
----
-domain: menu
-type: food
-category: desserts
----
-
 # Desserts | Επιδόρπια
 
 | Name (EN) | Name (GR) | Description (EN) | Description (GR) | Price | Tags | Allergens |

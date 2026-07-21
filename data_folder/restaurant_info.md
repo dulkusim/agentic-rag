@@ -1,9 +1,3 @@
----
-domain: restaurant
-type: information
-category: general
----
-
 # Restaurant Info | Πληροφορίες Εστιατορίου
 
 | Field | EN | GR |

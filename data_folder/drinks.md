@@ -1,9 +1,3 @@
----
-domain: menu
-type: beverage
-category: drinks
----
-
 # Lassi (Traditional Indian Yogurt Drink) | Λάσι (Παραδοσιακό Ινδικό Ρόφημα Γιαουρτιού)
 
 | Name (EN) | Name (GR) | Description (EN) | Description (GR) | Price | Allergens |
