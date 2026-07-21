@@ -1,22 +1,22 @@
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-with open("../data_folder/indian_menu.md", "r", encoding="utf-8") as f:
+with open("data_folder/indian_menu.md", "r", encoding="utf-8") as f:
     indian_menu = f.read()
 
-with open("../data_folder/chinese_menu.md", "r", encoding="utf-8") as f:
+with open("data_folder/chinese_menu.md", "r", encoding="utf-8") as f:
     chinese_menu = f.read()
     
-with open("../data_folder/wine_list.md", "r", encoding="utf-8") as f:
+with open("data_folder/wine_list.md", "r", encoding="utf-8") as f:
     wine_list = f.read()
 
-with open("../data_folder/drinks.md", "r", encoding="utf-8") as f:
+with open("data_folder/drinks.md", "r", encoding="utf-8") as f:
     drinks = f.read()
 
-with open("../data_folder/desserts.md", "r", encoding="utf-8") as f:
+with open("data_folder/desserts.md", "r", encoding="utf-8") as f:
     desserts = f.read()
 
-with open("../data_folder/restaurant_info.md", "r", encoding="utf-8") as f:
+with open("data_folder/restaurant_info.md", "r", encoding="utf-8") as f:
     restaurant_info = f.read()
 
             
